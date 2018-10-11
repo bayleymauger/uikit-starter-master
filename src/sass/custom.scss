@@ -1,0 +1,210 @@
+a.au-related {
+	display: block;
+	border: 1px solid $AU-color-foreground-border;
+	color: $AU-color-foreground-action;
+	text-decoration: none;
+	@include AU-space(margin-top, 1unit);
+	@include AU-space(padding, 0.938unit);
+
+	&:after {
+
+		content: ' ';
+		@include AU-space(width, 1.5unit);
+		@include AU-space(height, 1.5unit);
+		@include AU-space(margin-top, 1unit);
+		position: absolute;
+		top: calc(50% - 12px);
+		@include AU-space(right, 1.875unit);
+		display: block;
+		background-repeat: no-repeat;
+		background-color: transparent;
+		background-image: AU-svguri('<svg width="24px" height="15px" viewBox="0 0 24 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Wireframes-V3" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="SearchTyping" transform="translate(-466.000000, -2378.000000)" fill="#{$AU-color-foreground-action}"><g id="Tile.default" transform="translate(440.000000, 2154.000000)"><g id="iconmonstr-arrow-right-thin" transform="translate(26.000000, 224.000000)"><polygon id="Shape" points="21.883 8 14.356 14.235 15 15 24 7.479 15 -8.8817842e-16 14.355 0.764 21.884 7 0 7 0 8"></polygon></g></g></g></g></svg>');
+
+		.ie8 &,
+		.lt-ie8 & {
+			content: '';
+		}
+	}
+
+	&.au-related--dark {
+		color: $AU-colordark-foreground-action;
+		background: $AU-colordark-background;
+		border-color: $AU-colordark-foreground-border;
+
+		&:after {
+			background-image: AU-svguri('<svg width="24px" height="15px" viewBox="0 0 24 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Wireframes-V3" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="SearchTyping" transform="translate(-466.000000, -2378.000000)" fill="#{$AU-colordark-foreground-action}"><g id="Tile.default" transform="translate(440.000000, 2154.000000)"><g id="iconmonstr-arrow-right-thin" transform="translate(26.000000, 224.000000)"><polygon id="Shape" points="21.883 8 14.356 14.235 15 15 24 7.479 15 -8.8817842e-16 14.355 0.764 21.884 7 0 7 0 8"></polygon></g></g></g></g></svg>');
+		}
+	}
+
+	.au-related__subline {
+		display: inline;
+		@include AU-fontgrid(xs);
+
+		&:before {
+			content: '> ';
+			position: static;
+			display: inline;
+		}
+
+		&:first-child {
+			&:before {
+				content: none;
+			}
+		}
+	}
+
+	.au-related__mainline {
+		display: block;
+		text-decoration: underline;
+		@include AU-space(margin-top, 0.6unit);
+		@include AU-fontgrid(sm);
+	}
+
+	&:hover {
+		.au-related__mainline {
+			text-decoration: none;
+		}
+	}
+}
+
+a.au-book {
+	text-decoration: none;
+	display: block;
+	@include AU-space(margin-top, 1unit);
+
+	&.au-book__next {
+		text-align: right;
+	}
+
+	span {
+		display: block;
+	}
+
+	.au-book__mainline {
+		@include AU-fontgrid(lg);
+	}
+
+	.au-book__subline {
+		@include AU-space(margin-bottom, 0.6unit);
+		color: $AU-color-foreground-text;
+	}
+}
+
+a.au-tile {
+	display: block;
+	box-shadow: 0 1px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+	text-decoration: none;
+	@include AU-space(padding, 2.5unit, 1.25unit);
+	@include AU-space(margin-top, 1unit);
+
+	&:hover {
+		.au-tile__title {
+			text-decoration: none;
+		}
+	}
+
+	&:after {
+		content: ' ';
+		@include AU-space(width, 1.5unit);
+		@include AU-space(height, 1.5unit);
+		@include AU-space(margin-top, 1unit);
+		position: static;
+		display: block;
+		background-repeat: no-repeat;
+		background-color: transparent;
+		background-image: AU-svguri('<svg width="24px" height="15px" viewBox="0 0 24 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Wireframes-V3" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="SearchTyping" transform="translate(-466.000000, -2378.000000)" fill="#{$AU-color-foreground-action}"><g id="Tile.default" transform="translate(440.000000, 2154.000000)"><g id="iconmonstr-arrow-right-thin" transform="translate(26.000000, 224.000000)"><polygon id="Shape" points="21.883 8 14.356 14.235 15 15 24 7.479 15 -8.8817842e-16 14.355 0.764 21.884 7 0 7 0 8"></polygon></g></g></g></g></svg>');
+
+		.ie8 &,
+		.lt-ie8 & {
+			content: '';
+		}
+	}
+
+	&.au-tile--dark {
+		background: purple;
+		color: white;
+
+		&:after {
+			background-image: AU-svguri('<svg width="24px" height="15px" viewBox="0 0 24 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Wireframes-V3" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="SearchTyping" transform="translate(-466.000000, -2378.000000)" fill="#{$AU-colordark-foreground-action}"><g id="Tile.default" transform="translate(440.000000, 2154.000000)"><g id="iconmonstr-arrow-right-thin" transform="translate(26.000000, 224.000000)"><polygon id="Shape" points="21.883 8 14.356 14.235 15 15 24 7.479 15 -8.8817842e-16 14.355 0.764 21.884 7 0 7 0 8"></polygon></g></g></g></g></svg>');
+		}
+	}
+}
+
+.au-tile__title {
+	text-decoration: underline;
+}
+
+.au-hero {
+	color: white;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	position: relative;
+	@include AU-space(padding-top, 4unit);
+	@include AU-space(padding-bottom, 4unit);
+
+	.container-fluid {
+		z-index: 1;
+	}
+}
+
+.au-hero__background {
+	background: #00abe6;
+	height: 100%;
+	width: 100vw;
+	position: absolute;
+	left: 50%;
+	right: 50%;
+	margin-left: -50vw;
+	margin-right: -50vw;
+}
+
+h1.au-hero__title {
+	margin: 0;
+	z-index: 1;
+}
+
+.au-hero__subtitle {
+	margin: 0;
+	z-index: 1;
+}
+
+.au-tag {
+	display: inline-block;
+	margin: 1em 0.3em 0;
+	position: relative;
+	padding: 8px 15px;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 22px;
+	user-select: none;
+	color: #002664;
+	text-transform: uppercase;
+	@include AU-fontgrid(xs);
+	border: 2px solid #002664;
+
+	input {
+		position: absolute;
+		opacity: 0;
+		cursor: pointer;
+		height: 0;
+		width: 0;
+	}
+}
+
+.au-tag__label {
+	z-index: 1;
+	position: relative;
+}
+
+.au-tag input:checked~.au-tag__background {
+	background-color: #Ecf1f3;
+}
+
+.au-tag__background {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}

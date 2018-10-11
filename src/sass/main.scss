@@ -1,0 +1,104 @@
+// Dark theme overrides
+// $AU-colordark-foreground-text:   #ffffff;
+// $AU-colordark-foreground-action: #f9f9f9;
+// $AU-colordark-foreground-focus:  #13e241;
+// $AU-colordark-background:        #134169;
+
+// Light theme overrides
+// $AU-color-foreground-action: #134169;
+// $AU-color-foreground-focus:  #0C8927;
+
+//Main nav, set project specific breakpoint
+$AU-main-nav-breakpoint: sm;
+
+$AU-color-foreground-text: #242934 !default;
+$AU-color-foreground-action: #C60C30 !default;
+
+$AU-colordark-foreground-action: #FFFFFF;
+$AU-colordark-background: #752F8A;
+
+
+$AU-color-foreground-border: #DEE3E5;
+
+// UI-Kit
+@import './_uikit.scss';
+
+
+// Reset the body
+body {
+	padding: 0;
+	margin: 0;
+}
+
+
+// Increase the spacing for au-body elements
+body>.au-body {
+	@include AU-space(padding, 2unit 0);
+
+	@include AU-media(sm) {
+		@include AU-space(padding, 4unit 0);
+	}
+}
+
+
+// Add a max width to container fluid
+.container-fluid {
+	@include AU-space(max-width, 72unit);
+}
+
+
+// Change the banner responsiveness
+.banner {
+	[class^="col-"]+[class^="col-"] {
+		@include AU-space(padding-top, 2unit);
+	}
+
+	@include AU-media(md) {
+		[class^="col-"]+[class^="col-"] {
+			padding-top: 0;
+		}
+	}
+}
+
+
+// Change the main content spacing between sections
+.main-content {
+	.row+.row {
+		@include AU-space(margin-top, 2unit);
+	}
+
+	main {
+		@include AU-space(padding-top, 2unit);
+	}
+
+	@include AU-media(sm) {
+		.row+.row {
+			@include AU-space(margin-top, 4unit);
+		}
+
+		main {
+			padding-top: 0;
+		}
+	}
+}
+
+
+// Increase spacing between list items in footer
+.au-footer .au-link-list li {
+	@include AU-space(padding-right, 1unit);
+}
+
+.au-side-nav {
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.au-side-nav__content {
+	&>ul>li {
+		border: none;
+	}
+}
+
+.au-sidenav__title a {
+	border: none;
+	background: $AU-color-background-shade;
+}

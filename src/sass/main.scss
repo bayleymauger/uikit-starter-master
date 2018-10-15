@@ -12,11 +12,23 @@
 $AU-main-nav-breakpoint: sm;
 
 $AU-color-foreground-text: #242934 !default;
-$AU-color-foreground-action: #C60C30 !default;
+$AU-color-foreground-action: #752F8A !default;
 
 $AU-colordark-foreground-action: #FFFFFF;
 $AU-colordark-background: #752F8A;
 
+$AU-color-tag: #002664;
+
+$AU-fontsize-map: (
+  xxs: 12,
+  xs: 14,
+  sm: 16,
+  md: 20,
+  lg: 24,
+  xl: 32,
+  xxl: 40,
+  xxxl: 48
+);
 
 $AU-color-foreground-border: #DEE3E5;
 
@@ -27,8 +39,8 @@ $AU-color-foreground-border: #DEE3E5;
 // Reset the body
 body {
 	padding: 0;
-  margin: 0;
-  overflow-x: hidden;
+	margin: 0;
+	overflow-x: hidden;
 }
 
 
@@ -90,7 +102,10 @@ body>.au-body {
 }
 
 .au-side-nav {
-	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  a {
+    @include AU-fontgrid(xs);
+  }
 }
 
 .au-side-nav__content {

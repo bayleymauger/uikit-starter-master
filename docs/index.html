@@ -291,31 +291,54 @@
 				</nav>
 			</div>
 			<div class="col-md-6">
-        <label class="au-tag">
-          <span class="au-tag__label">One</span>
-          <input type="checkbox" checked="checked">
-          <div class="au-tag__background"></div>
-        </label>
-        <label class="au-tag">
-          <span class="au-tag__label">Two</span>
-          <input type="checkbox" checked="checked">
-          <div class="au-tag__background"></div>
-        </label>
-        <label class="au-tag">
-          <span class="au-tag__label">Three</span>
-          <input type="checkbox" checked="checked">
-          <div class="au-tag__background"></div>
-        </label>
-        <label class="au-tag">
-          <span class="au-tag__label">Four</span>
-          <input type="checkbox" checked="checked">
-          <div class="au-tag__background"></div>
-        </label>
-        <label class="au-tag">
-          <span class="au-tag__label">Five</span>
-          <input type="checkbox" checked="checked">
-          <div class="au-tag__background"></div>
-        </label>
+				<ul class="au-tags">
+					<li><a href="#">foo</a></li>
+					<li><a href="#">bar</a></li>
+					<li><a href="#">baz</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+
+				<!-- A plain set of anchor links in HTML -->
+
+				<nav class="au-tab__list">
+					<li><a href="#A" role="tab" class=a>Section A</a></li>
+					<li><a href="#B" role="tab" class="b ON">Section B</a></li>
+					<li><a href="#C" role="tab" class=c>Section C</a></li>
+				</nav>
+
+				<section id=A class="au-tab__section a">
+					<h2>Content heading A</h2>
+					<p>Copy with an <a href="#">Example focusable link</a> as content for A1.</p>
+				</section>
+
+				<section id=B class="au-tab__section b">
+					<h2>Content heading B</h2>
+					<p>Copy with an <a href="#">Example focusable link</a> as content for B1.</p>
+				</section>
+
+				<section id=C class="au-tab__section c">
+					<h2>Content heading C</h2>
+					<p>Copy without a focusable link as content for C1.</p>
+
+					<!-- A second embedded tablist example -->
+					<ul class="au-tab__list">
+						<li><a href=#D class=d>Sub-section D</a></li>
+						<li><a href=#E class="tl_lnk-on e">Sub-section E</a></li>
+					</ul>
+
+					<div id=D class="au-tab__section d">
+						<h2>Content heading D</h2>
+						<p>Copy without a focusable link as content for D.</p>
+					</div>
+
+					<div id=E class="au-tab__section e">
+						<h2>Content heading E</h2>
+						<p>Copy without a focusable link as content for E.</p>
+					</div>
+				</section>
 			</div>
 		</div>
 		</main>
@@ -352,6 +375,7 @@
 
 	<!-- The javascript from pancake to open and close side nav on desktop -->
 	<script type="text/javascript" src="./js/script.min.js"></script>
+	<script type="text/javascript" src="./js/custom.js"></script>
 </body>
 
 </html>
